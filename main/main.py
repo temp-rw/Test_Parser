@@ -22,13 +22,13 @@ def parse_mebelshara(html) -> str:
             }
             shops_info.append(shop_info)
 
+
     return json.dumps(shops_info, ensure_ascii=False, indent=2)
 
 
 def parse_tui(html):
-    shops_info = []
-    bs_obj = BeautifulSoup(html, features="lxml")
-    print(html)
+    pass
+
 
 
 def main():
@@ -41,6 +41,7 @@ def main():
     tui_url = "https://www.tui.ru/offices/"
     print(parse_mebelshara(session.get(mebelshara_url).text))
     # parse_tui(requests.get(tui_url).text)
+
 
 
 if __name__ == '__main__':
